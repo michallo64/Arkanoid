@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -38,9 +39,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 3541024305
     locked: 0
@@ -49,4 +47,10 @@ TagManager:
     locked: 0
   - name: Ball
     uniqueID: 2434734161
+    locked: 0
+  - name: Bricks
+    uniqueID: 658646085
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
