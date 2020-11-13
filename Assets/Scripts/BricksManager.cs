@@ -30,6 +30,7 @@ public class BricksManager : MonoBehaviour
     public int CurrentLevel;
     public Brick brickPrefab;
     public Color[] BrickColors;
+    public static event Action OnLevelLoaded;
 
     private int maxRows = 17;
     private int maxCols = 12;
@@ -43,6 +44,7 @@ public class BricksManager : MonoBehaviour
         bricksContainer = new GameObject("BricksContainer");
         this.LevelsData = this.LoadLevelsData();
         this.GenerateBricks();
+        
     }
 
     internal void LoadNextLevel()
@@ -101,6 +103,7 @@ public class BricksManager : MonoBehaviour
             currentSpawnY -= shiftAmount;
         }
         this.InitialBricksCount = this.RemainingBricks.Count;
+        OnLevelLoaded?.Invoke();
     }
 
     private List<int[,]> LoadLevelsData()
